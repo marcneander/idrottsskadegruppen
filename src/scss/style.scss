@@ -1,3 +1,74 @@
+/* Variable overrides */
+$brand-primary: #5996da;
+$link-color: #5996da;
+$font-family-sans-serif: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$container-max-widths: (
+  lg: 900px
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 body {
-    background: #000;
+    background-color: #e9e9e9;
+}
+
+main {
+    padding-top: 60px;
+}
+
+h1 {
+    @include media-breakpoint-down(md) {
+        font-size: 2em;
+    }
+}
+
+h2 {
+    @include media-breakpoint-down(md) {
+        font-size: 1.8em;
+    }
+}
+
+h3 {
+    @include media-breakpoint-down(md) {
+        font-size: 1.6em;
+    }
+}
+
+h4 {
+    @include media-breakpoint-down(md) {
+        font-size: 1.4em;
+    }
+}
+
+h5 {
+    @include media-breakpoint-down(md) {
+        font-size: 1.25em;
+    }
+}
+
+.person-text {
+    font-size: 0.875rem;
+}
+
+
+.navbar {
+    background-color: $brand-primary;
+
+    .container {
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .navbar-toggler {
+        @include media-breakpoint-down(md) {
+            right: 0;
+        }
+    }
+
+    .navbar-brand {
+        text-transform: uppercase;
+    }
 }
